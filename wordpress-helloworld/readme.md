@@ -20,3 +20,7 @@ yarn start
 browse http://localhost:8000/
 
 ```
+
+wordpress login
+admin
+123456
