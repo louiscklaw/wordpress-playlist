@@ -7,7 +7,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "gitUpdate": "git add . && git commit -m\"update,\" && git push"
+    "gitUpdate": "git add . && git commit -m\"update,\" && git push",
+    "clean":"rm -rf **/node_modules"
   },
   "keywords": [],
   "author": "",
