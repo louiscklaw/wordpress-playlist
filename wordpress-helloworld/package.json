@@ -1,0 +1,24 @@
+{
+  "name": "daniel_jo_assignment_student",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gitUpdate": "git add . && git commit -m\"update wordpress-helloworld,\" && git push",
+    "into_docker":"docker compose -f ./docker-compose.dev.yml exec -it wordpress bash",
+    "dev": "browser-sync start --proxy \"localhost:32834\" --files \"src/wp-content/themes/**/*.*\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^6.2.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "bootstrap": "^5.2.3",
+    "react-bootstrap": "^2.6.0"
+  }
+}

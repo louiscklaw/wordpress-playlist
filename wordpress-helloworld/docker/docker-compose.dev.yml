@@ -1,0 +1,43 @@
+services:
+  db:
+    # We use a mariadb image which supports both amd64 & arm64 architecture
+    image: mariadb:10.6.4-focal
+    # If you really want to use MySQL, uncomment the following line
+    #image: mysql:8.0.27
+    command: '--default-authentication-plugin=mysql_native_password'
+    volumes:
+      - ddmseoul_wp_demo_dev_db_data:/var/lib/mysql
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=somewordpress
+      - MYSQL_DATABASE=wordpress
+      - MYSQL_USER=wordpress
+      - MYSQL_PASSWORD=wordpress
+    expose:
+      - 3306
+      - 33060
+  wordpress:
+    image: wordpress:latest
+    ports:
+      - 32834:80
+    restart: always
+    environment:
+      - WORDPRESS_DB_HOST=db
+      - WORDPRESS_DB_USER=wordpress
+      - WORDPRESS_DB_PASSWORD=wordpress
+      - WORDPRESS_DB_NAME=wordpress
+      # - WP_DOMAIN="wp_demo.localhost.localdomain"
+      # - WP_ADMIN_USERNAME="admin"
+      # - WP_ADMIN_PASSWORD="123456"
+      # - WP_ADMIN_EMAIL="123@123.com"
+      # - WP_PATH="/var/www/wordpress"
+      # - WP_DB_NAME="wordpress"
+      # - WP_DB_USERNAME="wordpress"
+      # - WP_DB_PASSWORD="wordpress"
+    user: 1000:1000
+    volumes:
+      - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+      - ../src/wp-content/themes:/var/www/html/wp-content/themes
+
+volumes:
+  ddmseoul_wp_demo_dev_db_data:
