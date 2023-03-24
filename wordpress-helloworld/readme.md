@@ -1,7 +1,22 @@
-admin / 123456
+```bash
 
-https://developer.wordpress.org/files/2014/10/Screenshot-2019-01-23-00.20.04.png
-https://developer.wordpress.org/files/2014/10/Screenshot-2019-01-23-00.20.04.png
+$ ./build_docker.sh
 
-original
-https://unblast.com/
+# first
+# inside wordpress page
+# http://192.168.10.180:32834/wp-admin/plugins.php
+advanced-custom-fields
+wp-gatsby
+wp-graphql-acf-master <- install by github repo
+wp-graphql
+
+
+# then
+# inside gatsby docker
+yarn -D
+yarn start
+
+# finally
+browse http://localhost:8000/
+
+```
