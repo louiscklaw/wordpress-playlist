@@ -1,26 +1,10 @@
+# https://github.com/devloco/create-react-wptheme
+
 ```bash
+./build_docker.sh
 
-$ ./build_docker.sh
-
-# first
-# inside wordpress page
-# http://192.168.10.180:32834/wp-admin/plugins.php
-advanced-custom-fields
-wp-gatsby
-wp-graphql-acf-master <- install by github repo
-wp-graphql
-
-
-# then
-# inside gatsby docker
-yarn -D
-yarn start
-
-# finally
-browse http://localhost:8000/
+# inside docker
+cd /wordpress/var/www/html/wp-content/themes/react-tryout/react-src
+  yarn start
 
 ```
-
-wordpress login
-admin
-123456
