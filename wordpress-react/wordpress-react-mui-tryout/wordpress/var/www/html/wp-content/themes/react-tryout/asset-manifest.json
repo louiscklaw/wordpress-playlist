@@ -1,0 +1,27 @@
+{
+  "files": {
+    "static/css/1.chunk.css": "/wp-content/themes/react-tryout/static/css/1.chunk.css",
+    "static/js/1.chunk.js": "/wp-content/themes/react-tryout/static/js/1.chunk.js",
+    "static/css/1.chunk.css.map": "/wp-content/themes/react-tryout/static/css/1.chunk.css.map",
+    "static/js/1.chunk.js.map": "/wp-content/themes/react-tryout/static/js/1.chunk.js.map",
+    "main.css": "/wp-content/themes/react-tryout/static/css/main.chunk.css",
+    "main.js": "/wp-content/themes/react-tryout/static/js/main.chunk.js",
+    "main.css.map": "/wp-content/themes/react-tryout/static/css/main.chunk.css.map",
+    "main.js.map": "/wp-content/themes/react-tryout/static/js/main.chunk.js.map",
+    "runtime-main.js": "/wp-content/themes/react-tryout/static/js/bundle.js",
+    "runtime-main.js.map": "/wp-content/themes/react-tryout/static/js/bundle.js.map",
+    "index.php": "/wp-content/themes/react-tryout/index.php",
+    "static/media/logo.svg": "/wp-content/themes/react-tryout/static/media/logo.5d5d9eef.svg",
+    "static/media/300.css": "/wp-content/themes/react-tryout/static/media/roboto-vietnamese-300-normal.48c684d9.woff2",
+    "static/media/400.css": "/wp-content/themes/react-tryout/static/media/roboto-vietnamese-400-normal.ca3b09b6.woff2",
+    "static/media/500.css": "/wp-content/themes/react-tryout/static/media/roboto-vietnamese-500-normal.7cda2cfe.woff2",
+    "static/media/700.css": "/wp-content/themes/react-tryout/static/media/roboto-vietnamese-700-normal.cdaab836.woff2"
+  },
+  "entrypoints": [
+    "static/js/bundle.js",
+    "static/css/1.chunk.css",
+    "static/js/1.chunk.js",
+    "static/css/main.chunk.css",
+    "static/js/main.chunk.js"
+  ]
+}
