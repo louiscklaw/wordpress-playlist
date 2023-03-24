@@ -32,15 +32,100 @@ var _jsxFileName = "/home/logic/_workspace/wordpress-playlist/wordpress-react/wo
 
 
 function App() {
+  let [json_content, setJsonContent] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
+  let [json_posts, setJsonPosts] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
+  let [render_post, setRenderPost] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
+
+  function createMarkup() {
+    return {
+      __html: 'First &middot; Second'
+    };
+  }
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    fetch('/wp-json').then(res => res.json()).then(res_json => setJsonContent(JSON.stringify(res_json, null, 2)));
+    fetch('/wp-json/wp/v2/posts').then(res => res.json()).then(res_json => {
+      setRenderPost(res_json[0].content.rendered);
+      setJsonPosts(JSON.stringify(res_json[0].content.rendered, null, 2));
+    });
+  }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "App",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6,
-      columnNumber: 10
+      lineNumber: 33,
+      columnNumber: 5
     }
-  }, "helloworld ?");
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34,
+      columnNumber: 7
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("pre", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35,
+      columnNumber: 9
+    }
+  }, "/wp-json/wp/v2/posts"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    dangerouslySetInnerHTML: {
+      __html: render_post
+    },
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36,
+      columnNumber: 9
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    dangerouslySetInnerHTML: createMarkup(),
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37,
+      columnNumber: 9
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("pre", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38,
+      columnNumber: 9
+    }
+  }, json_posts)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40,
+      columnNumber: 7
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("pre", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41,
+      columnNumber: 7
+    }
+  }, "/wp-json"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "json_content",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42,
+      columnNumber: 7
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("pre", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43,
+      columnNumber: 9
+    }
+  }, json_content))));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
