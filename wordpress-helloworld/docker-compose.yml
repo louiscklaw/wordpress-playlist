@@ -36,4 +36,4 @@ services:
     # user: 1000:1000
     volumes:
       - ./wordpress/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
-      # - ../src/wp-content/themes:/var/www/html/wp-content/themes
+      - ./wordpress/var/www/html/wp-content/themes:/var/www/html/wp-content/themes
