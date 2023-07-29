@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "gitUpdate": "git add . && git commit -m\"update,\" && git push",
+    "gitUpdate": "git add . && git commit -m\"update wordpress-helloworld,\"",
     "clean":"rm -rf **/node_modules"
   },
   "keywords": [],
